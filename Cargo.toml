@@ -1,0 +1,39 @@
+[package]
+name = "zk-stark-mixer-contract"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = ["io"]
+
+[workspace.dependencies]
+gstd = "1.4.1"
+gmeta = "1.4.1"
+gear-wasm-builder = "1.4.1"
+
+parity-scale-codec = { version = "3", default-features = false}
+scale-info = { version = "2", default-features = false }
+
+risc0-zkvm = { git = "https://github.com/kostiksobol/risc0-fork", rev = "04201e6", default-features = false}
+rs_merkle = { git = "https://github.com/dan-sobolev-varathon/rs-merkle-fork", rev = "83fc54f", default-features = false }
+serde-json-core = "0.5.1"
+
+io = {path = "io"}
+
+
+[dependencies]
+gstd.workspace = true
+gmeta.workspace = true
+
+scale-info.workspace = true
+parity-scale-codec.workspace = true
+rs_merkle.workspace = true
+risc0-zkvm.workspace = true
+serde-json-core.workspace = true
+
+io.workspace = true
+
+[build-dependencies]
+gear-wasm-builder.workspace = true
+gmeta.workspace = true
+io.workspace = true
